@@ -29,11 +29,11 @@ Customize the parameters and run the container:
 
 ```
 docker run -it --privileged --rm \
-    --dns=8.8.8.8 \                     # mandatory; Google DNS is good enough
-    --env SERVER=nl868.nordvpn.com \    # optional; this is the default
-    --env PROTOCOL=udp \                # optional; this is the default
-    -p 1080:1080 \                      # expose SOCKS proxy
-    -p 3128:3128 \                      # expose HTTP/HTTPS proxy
+    --dns=8.8.8.8 \
+    --env SERVER=nl868.nordvpn.com \
+    --env PROTOCOL=udp \
+    -p 1080:1080 \
+    -p 3128:3128 \
     nordvpn-proxy
 ```
 
