@@ -49,5 +49,6 @@ curl -x http://127.0.0.1:3128 http://whatismyip.akamai.com
 
 ## References
 
+ - [Server recommended by NordVPN](http://nordvpn.com/servers/tools/)
  - [How can I connect to NordVPN using Linux Terminal?](https://support.nordvpn.com/Connectivity/Linux/1047409422/How-can-I-connect-to-NordVPN-using-Linux-Terminal.htm)
  - [Official NordVPN client in a docker container](https://github.com/bubuntux/nordvpn)
