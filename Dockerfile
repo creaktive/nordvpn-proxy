@@ -6,6 +6,7 @@ EXPOSE 3128
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    ca-certificates \
     dante-server \
     openvpn \
     squid \
@@ -21,8 +22,8 @@ RUN rm ovpn.zip
 
 ADD danted.conf /etc
 ADD squid.conf /etc/squid
-ADD auth.txt .
 ADD run.sh .
 ADD up.sh .
+ADD auth.txt .
 
 CMD [ "./run.sh" ]
