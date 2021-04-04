@@ -8,6 +8,7 @@ Or a couple; but certainly you do not want to completely switch to another netwo
 If your application does support SOCKS (or even HTTP) proxy, `nordvpn-proxy` is what you need!
 
 However, please be aware that this is a very hacky solution, suitable for private use but definitely not production-ready (for whatever definition of "production").
+You might want to check the links in [References](#References) for other solutions.
 
 ## Usage
 
@@ -50,5 +51,6 @@ curl -x http://127.0.0.1:3128 http://whatismyip.akamai.com
 ## References
 
  - [Server recommended by NordVPN](http://nordvpn.com/servers/tools/)
+ - [Tutorials on how to set up proxy with NordVPN](https://support.nordvpn.com/Connectivity/Proxy/)
  - [How can I connect to NordVPN using Linux Terminal?](https://support.nordvpn.com/Connectivity/Linux/1047409422/How-can-I-connect-to-NordVPN-using-Linux-Terminal.htm)
  - [Official NordVPN client in a docker container](https://github.com/bubuntux/nordvpn)
