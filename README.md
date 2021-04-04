@@ -25,7 +25,7 @@ Now, build the thing (note that the aforementioned `auth.txt` file will be store
 docker build -t nordvpn-proxy .
 ```
 
-Customize the parameters and run the container:
+Customize the parameters (`--env` arguments are optional) and run the container:
 
 ```
 docker run -it --privileged --rm \
