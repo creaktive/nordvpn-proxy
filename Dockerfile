@@ -8,6 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     ca-certificates \
     dante-server \
+    jq \
     openvpn \
     squid \
     unzip \

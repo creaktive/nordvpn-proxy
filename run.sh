@@ -6,7 +6,11 @@ if [ -z "$PROTOCOL" ]; then
 fi
 
 if [ -z "$SERVER" ]; then
-    SERVER=nl868.nordvpn.com
+    SERVER=$( \
+        wget -q -O - 'https://nordvpn.com/wp-admin/admin-ajax.php?action=servers_recommendations' | \
+        jq --arg type "openvpn_${PROTOCOL}" -r '.[] | select(.status == "online") | select(.technologies[].identifier == $type) | .hostname' | \
+        head -n1
+    )
 fi
 
 openvpn \

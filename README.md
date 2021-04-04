@@ -25,7 +25,7 @@ Now, build the thing (note that the aforementioned `auth.txt` file will be store
 docker build -t nordvpn-proxy .
 ```
 
-Customize the parameters (`--env` arguments are optional) and run the container:
+Customize the parameters (`--env` arguments are optional; default is to use TCP and a recommended server) and run the container:
 
 ```
 docker run -it --privileged --rm \
@@ -43,10 +43,6 @@ Test it!
 curl -x socks5h://127.0.0.1:1080 http://whatismyip.akamai.com
 curl -x http://127.0.0.1:3128 http://whatismyip.akamai.com
 ```
-
-## TODO
-
- - `curl 'https://nordvpn.com/wp-admin/admin-ajax.php?action=servers_recommendations' | jq '.[0].hostname'`
 
 ## References
 
