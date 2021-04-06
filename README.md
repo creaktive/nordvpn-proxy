@@ -37,6 +37,12 @@ docker run -it --privileged --rm \
     nordvpn-proxy
 ```
 
+You can also specify just the 2 digits of the country code and a random server from that country will be selected:
+
+```
+docker run -it --privileged --rm --dns=8.8.8.8 --env SERVER=de -p 1080:1080 nordvpn-proxy
+```
+
 Test it!
 
 ```

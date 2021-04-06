@@ -12,6 +12,14 @@ if [ -z "$SERVER" ]; then
         shuf | \
         head -n1
     )
+elif [ ${#SERVER} -eq 2 ]; then
+    SERVER=$( \
+        find "ovpn_${PROTOCOL}" -type f -name "${SERVER}*.ovpn" -print | \
+        cut -d / -f 2 | \
+        cut -d . -f 1-3 | \
+        shuf | \
+        head -n1
+    )
 fi
 
 openvpn \
